@@ -1,0 +1,154 @@
+<div class="estas">
+	<div class="chip">Admision de Estudiantes<i id="c-admision" class="material-icons">close</i></div>
+</div>
+<div class="principal">
+	<div class="row ad-container">
+		<div class="ad-datos-personales-estudiante col l10">
+			<div class="ad-title col l12">
+				<span>Datos Personales</span>
+			</div>
+			<form class="col l12">
+		        <div class="ad-personales">
+					<input type="text" name="FirstName" placeholder="Primer Nombre">
+					<input type="text" name="FirstName" placeholder="Segundo Nombre">
+					<input type="text" name="FirstName" placeholder="Primer Apellido">
+					<input type="text" name="FirstName" placeholder="Segundo Apellido">
+					<select>
+				    	<option value="" disabled selected>Tipo de documento</option>
+				      	<option value="1">Registro Civil</option>
+				      	<option value="2">Tarjeta de Identidad</option>
+				      	<option value="3">Cedula de Ciudadania</option>
+				    </select>
+				    <input type="text" name="Numero" placeholder="Numero">
+				    <input type="date" class="datepicker" placeholder="Fecha de Nacimiento">
+				    <p>10 Años <pre>  </pre></p> <p>Sexo: </p>
+				    <p>
+					    <input name="group1" type="radio" id="test1" />
+					    <label for="test1">M</label>
+					</p>
+					<p>
+					    <input name="group1" type="radio" id="test2" />
+					    <label for="test2">F</label>
+					</p>
+					<input type="text" id="autocomplete" placeholder="Ciudad de Nacimiento">
+					<input type="text" id="autocomplete" placeholder="Dirección">
+					<input type="text" id="autocomplete" placeholder="Estrato">
+					<!-- Switch -->
+					<div class="switch">
+					    <label>
+					      Pre-Matricula
+					    <input type="checkbox">
+					    <span class="lever"></span>
+					      Matricula
+					    </label>
+					</div>
+				</div>
+			</form>
+			
+		</div>
+		<div class="ad-foto-estudiante col l2">
+			<div class="ad-title col l12">
+				<span>Fotografia</span>
+			</div>
+			<script src="js/upload.js"></script>
+            <div id="image-preview">
+                <label for="image-upload" id="image-label"><i class="material-icons">camera_alt</i></label>
+                <input type="file" name="image" id="image-upload" />
+            </div>
+		</div>
+	</div>
+	<div class="row ad-container2">
+		<div class="ad-title col l12">
+				<span>Datos del Acudiente</span>
+		</div>
+		<form action="">
+		<div class="ad-datos-estudiante col l12">
+			
+				<input type="text" name="FirstName" placeholder="Nombres">
+				<input type="text" name="FirstName" placeholder="Apellidos">
+				<select>
+			    	<option value="" disabled selected>Tipo de documento</option>
+			      	<option value="1">Registro Civil</option>
+			      	<option value="2">Tarjeta de Identidad</option>
+			      	<option value="3">Cedula de Ciudadania</option>
+			    </select>
+			    <input type="text" name="Numero" placeholder="Numero">
+				<input type="text" name="FirstName" placeholder="Parentesco">
+				<input type="text" name="FirstName" placeholder="Dirección">
+				<input type="text" name="FirstName" placeholder="Telefono">
+				<input type="text" name="FirstName" placeholder="Celular">
+				<input type="text" name="FirstName" placeholder="Correo Electronico">
+				<p><pre> </pre>Sexo: <pre>  </pre></p>
+				    <p>
+					    <input name="group2" type="radio" id="test3" />
+					    <label for="test3">M</label>
+					</p><pre>   </pre>
+					<p>
+					    <input name="group2" type="radio" id="test4" />
+					    <label for="test4">F</label>
+					</p><pre>  </pre>
+				<input type="date" class="datepicker" placeholder="Fecha de Nacimiento">
+				<p>35 Años <pre>  </pre><p>
+      			<input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+      			<label for="filled-in-box">Vivo con el</label><pre>  </pre>
+    			</p>
+				<select>
+			    	<option value="" disabled selected>Estado Civil</option>
+			      	<option value="1">Soltero(a)</option>
+			      	<option value="2">Casado(a)</option>
+			      	<option value="3">Union Libre</option>
+			      	<option value="3">Divorciado</option>
+			    </select>
+			    <select>
+			    	<option value="" disabled selected>Nivel Educativo</option>
+			      	<option value="1">Sin Estudios</option>
+			      	<option value="2">Educación Primaria</option>
+			      	<option value="3">Educación Secundaria</option>
+			      	<option value="3">Educación Técnica</option>
+			      	<option value="3">Educación Universitaria</option>
+			    </select>
+			    <input type="text" name="FirstName" placeholder="Titulo">
+		</div>
+		</form>
+	</div>
+	<div class="row ad-container3">
+		<div class="ad-title col l12">
+			<span>Registro Academico</span>
+		</div>
+		<form action="">
+		<div class="ad-registro-academico col l12">
+			<input type="text" name="FirstName" placeholder="Procedencia">
+			<input type="text" name="FirstName" placeholder="Motivo de retiro">
+			<input type="text" name="FirstName" placeholder="Grupo">
+			<input type="text" name="FirstName" placeholder="Jornada">
+			<input type="text" name="FirstName" placeholder="Periodo lectivo">
+		</div>
+		</form>
+	</div>
+	
+<script>
+	//tags
+	$( "#c-admision" ).click(function(){
+		$('.aside').load('vistas/tablero/menu2.html');
+		$('.main').load('vistas/tablero/base.html');
+		$('.nav .menu1').removeClass('active1');
+        $('#tablero').addClass('active1');
+	});
+	 $(document).ready(function() {
+    	$('select').material_select();
+    	$( "#admisionEstudiante" ).addClass("active2");
+ 	 });
+ 	 $('.datepicker').pickadate({
+	    selectMonths: true, // Creates a dropdown to control month
+	    selectYears: 50 // Creates a dropdown of 15 years to control year
+	  });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $.uploadPreview({
+            input_field: "#image-upload",
+            preview_box: "#image-preview",
+            label_field: "#image-label"
+        });
+    });
+</script>

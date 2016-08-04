@@ -1,0 +1,15 @@
+<div class="estas">
+	<div class="chip">Logros<i id="c-admision" class="material-icons">close</i></div>
+</div>
+<div class="principal">
+	
+</div>
+<script>
+	//tags
+	$( "#c-admision" ).click(function(){
+		$('.aside').load('vistas/tablero/menu2.html');
+		$('.main').load('vistas/tablero/base.html');
+		$('.nav .menu1').removeClass('active1');
+        $('#tablero').addClass('active1');
+	});
+</script>
